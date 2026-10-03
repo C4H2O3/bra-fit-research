@@ -1,5 +1,7 @@
 # Bra Fit Research
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23125879.svg)](https://doi.org/10.5281/zenodo.23125879)
+
 An independent, non-commercial research project on bra sizing: what actually
 predicts fit, and why the near-universal two-measurement method (underbust +
 bust, convert the difference to a cup letter) is not well supported by data.
