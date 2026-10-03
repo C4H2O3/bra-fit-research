@@ -48,4 +48,4 @@ full responsibility for the content of this work.
 
 ## Contact
 
-Open an issue in this repository.
+I'm open to questions and ideas for collaboration. Open an issue in this repository.
