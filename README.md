@@ -44,9 +44,9 @@ Both are free to reuse; the condition is attribution.
 ## Declaration of AI Use
 
 The author used Claude (Anthropic) to assist with computational analysis and
-code implementation. The tool was used under the author's direction. All
-findings and figures were independently verified by the author, who takes
-full responsibility for the content of this work.
+code implementation. The tool was used under the author's direction. Obtained
+results were independently verified by the author, who takes full
+responsibility for the content of this work.
 
 ## Contact
 
