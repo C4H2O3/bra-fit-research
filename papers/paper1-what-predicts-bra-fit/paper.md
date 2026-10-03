@@ -1,5 +1,19 @@
 # What Predicts Bra Fit and Why It's Not What You Think
 
+## Contents
+
+- [Introduction](#introduction)
+- [Data and Method](#data-and-method)
+- [Results](#results)
+- [Additional Finding: Pain and Migraine](#additional-exploratory-finding-mentions-of-pain-and-migraine-in-review-text)
+- [Additional Finding: Band Adjustment Direction](#additional-exploratory-finding-direction-of-band-adjustment-relative-to-the-label)
+- [Additional Finding: Wire Poking](#additional-exploratory-finding-wire-poking-through-wire-length-and-cup-depth)
+- [Findings](#findings)
+- [Limitations](#limitations)
+- [Conclusion](#conclusion)
+- [Data and Code](#data-and-code)
+- [References](#references)
+
 ## Introduction
 
 Incorrect bra sizing is a widespread, well-documented problem. Coltman, Steele, and McGhee (2018) showed in a sample of 309 women that about 90% fail professional fit criteria, with the cup, front band, and straps fitting worst. A more recent study, Haworth et al. (2025, n=24, Int. J. Fashion Design, Technology and Education, DOI 10.1080/17543266.2025.2461460), gives an even starker result: by the same professional criteria, not a single participant passed. Despite this, the overwhelming majority of existing sizing methods – from retail staff to brands' own online calculators – still come down to the same scheme: measure the underbust, measure the bust, take the difference, and convert it into a cup letter. Whether this method, despite being a near-universal industry standard, actually relates to real-world fit across a large population has never been empirically tested.
