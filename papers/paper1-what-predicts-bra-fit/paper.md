@@ -21,7 +21,7 @@ The scientific novelty of this work is that, to the best of my knowledge, this i
 
 ## Data and Method
 
-The data source is bratabase.com, an open crowdsourced database of bra measurements and reviews. Collection was carried out manually by one person between September 18 and 21, 2026, without automation. This work does not publish the raw dataset itself, only derived figures, tables, and analysis code. Readers wishing to replicate the collection can go to the original sources (bratabase.com, and for comparison, Kaggle Fit Feedback, the ModCloth and RentTheRunway datasets).
+The data source is bratabase.com, an open crowdsourced database of bra measurements and reviews. Collection was carried out manually by one person between September 18 and 21, 2026, without automation. This work does not publish the raw dataset itself, only derived figures, tables, and analysis code. Readers wishing to replicate the collection can go to the original sources: [bratabase.com](https://bratabase.com), and for comparison, the ModCloth and RentTheRunway fit-feedback data on Kaggle ([Clothing Fit Dataset for Size Recommendation](https://www.kaggle.com/datasets/rmisra/clothing-fit-dataset-for-size-recommendation)).
 
 Four linked datasets were extracted.
 
@@ -218,15 +218,16 @@ Taken together, the results of this paper call into question not the accuracy of
 ## Data and Code
 
 This work does not publish the raw dataset (rationale in "Data and Method"). The aggregation and statistical analysis code used to produce Tables 1–10 (excl. Table 5) is published. For independently assembling comparable data:
-- bratabase.com — an open database of bra measurements and reviews (manual collection, no automation);
-- Kaggle Fit Feedback (the ModCloth and RentTheRunway datasets) — for comparison, see Introduction.
+- [bratabase.com](https://bratabase.com) — an open database of bra measurements and reviews (manual collection, no automation);
+- [Clothing Fit Dataset for Size Recommendation](https://www.kaggle.com/datasets/rmisra/clothing-fit-dataset-for-size-recommendation) (the ModCloth and RentTheRunway datasets, Kaggle) — for comparison, see Introduction.
 
 ## References
 
 1. Coltman, C.E., Steele, J.R., McGhee, D.E. (2018). Which Bra Components Contribute to Incorrect Bra Fit in Women Across a Range of Breast Sizes? *Clothing and Textiles Research Journal*, 36(2), 78–90. https://doi.org/10.1177/0887302X17743814
 2. Haworth, L., Sinclair, J., May, K., Janssen, J., Selfe, J., Chohan, A. (2025). Highlighting the need for change through an analysis of bra fit quality. *International Journal of Fashion Design, Technology and Education*, 19(2), 205–214. https://doi.org/10.1080/17543266.2025.2461460
 3. Jolkovsky, E., Miller, M.N., Barkhordarzadeh, A.D., Piva, S., Alnaseri, T., Slack, G.C. (2025). Improving Documentation in Plastic Surgery: Sister Bra Size Group and BMI Are More Indicative of Breast Weight Than Cup Size. *Aesthetic Surgery Journal*, 45(10), 1017–1025. https://doi.org/10.1093/asj/sjaf114
-4. Oon, I.H., Mara, J.K., Steele, J.R., McGhee, D.E., Lewis, V., Coltman, C.E. (2022). Women with larger breasts are less satisfied with their breasts: Implications for quality of life and physical activity participation. *Women's Health*, 18. https://doi.org/10.1177/17455057221109394
-5. Pocock, K.S., Rigdon, J., Smirnoff, L., Mills, C., David, L.R., Wells, R.E., Lipton, R.B., Moskatel, L.S. (2026). Patterns of head and neck pain and obstructive sleep apnea in women with macromastia: A cross-sectional analysis. *Headache: The Journal of Head and Face Pain* (early access). https://doi.org/10.1111/head.70226
-6. Shi, Y., Shen, H., Taylor, L.W., Cheung, V. (2020). The impact of age and body mass index on a bra sizing system formed by anthropometric measurements of Sichuan Chinese females. *Ergonomics*, 63(11), 1434–1441. https://doi.org/10.1080/00140139.2020.1795276
-7. Sohn, M., Kim, D.-E. (2026). Body shape and bust variations by ethnicity and BMI using SizeUSA data. *Fashion and Textiles*, 13(1). https://doi.org/10.1186/s40691-026-00456-z
+4. Misra, R. Clothing Fit Dataset for Size Recommendation [Data set]. Kaggle. https://www.kaggle.com/datasets/rmisra/clothing-fit-dataset-for-size-recommendation
+5. Oon, I.H., Mara, J.K., Steele, J.R., McGhee, D.E., Lewis, V., Coltman, C.E. (2022). Women with larger breasts are less satisfied with their breasts: Implications for quality of life and physical activity participation. *Women's Health*, 18. https://doi.org/10.1177/17455057221109394
+6. Pocock, K.S., Rigdon, J., Smirnoff, L., Mills, C., David, L.R., Wells, R.E., Lipton, R.B., Moskatel, L.S. (2026). Patterns of head and neck pain and obstructive sleep apnea in women with macromastia: A cross-sectional analysis. *Headache: The Journal of Head and Face Pain* (early access). https://doi.org/10.1111/head.70226
+7. Shi, Y., Shen, H., Taylor, L.W., Cheung, V. (2020). The impact of age and body mass index on a bra sizing system formed by anthropometric measurements of Sichuan Chinese females. *Ergonomics*, 63(11), 1434–1441. https://doi.org/10.1080/00140139.2020.1795276
+8. Sohn, M., Kim, D.-E. (2026). Body shape and bust variations by ethnicity and BMI using SizeUSA data. *Fashion and Textiles*, 13(1). https://doi.org/10.1186/s40691-026-00456-z

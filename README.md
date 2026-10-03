@@ -13,7 +13,7 @@ holds up against real data. It is not a product and not a commercial venture.
 - **[What Predicts Bra Fit, and Why It's Not What You Think](papers/paper1-what-predicts-bra-fit/paper.md)**
   — a secondary analysis of ~35,000 crowdsourced bra reviews matched with
   real garment measurements. Underbust circumference does not predict fit;
-  cup geometry does. Also available as [.docx](papers/paper1-what-predicts-bra-fit/paper.docx).
+  cup geometry does.
 
 - **A Quantum of Unmercy: Why Bra Sizing Cannot Be Transferred Between
   Brands** — in progress. Covers the sizing engine, the verified per-brand
@@ -23,11 +23,13 @@ holds up against real data. It is not a product and not a commercial venture.
 ## Data
 
 The underlying datasets (Bratabase measurements and reviews) are not
-redistributed here — see the "Data and Method" section of the paper for why,
-and for links to the original sources if you want to collect comparable data
-yourself. Each paper's `analysis/` folder has the code used to produce its
-tables (see each paper for exactly which ones), but not the raw data it ran
-on.
+redistributed here — see the "Data and Method" section of the paper for why.
+To assemble comparable data yourself: [bratabase.com](https://bratabase.com)
+for the primary source, and for comparison,
+[Clothing Fit Dataset for Size Recommendation](https://www.kaggle.com/datasets/rmisra/clothing-fit-dataset-for-size-recommendation)
+on Kaggle (the ModCloth and RentTheRunway data). Each paper's `analysis/`
+folder has the code used to produce its tables (see each paper for exactly
+which ones), but not the raw data it ran on.
 
 ## License
 
