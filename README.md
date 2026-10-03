@@ -6,26 +6,26 @@ An independent, non-commercial research project on bra sizing: what actually
 predicts fit, and why the near-universal two-measurement method (underbust +
 bust, convert the difference to a cup letter) is not well supported by data.
 
-This started as personal curiosity — reading patents, standards, and the
+This started as personal curiosity: reading patents, standards, and the
 academic literature on breast anthropometry and bra fit, then testing what
 holds up against real data. It is not a product and not a commercial venture.
 
 ## Papers
 
-- **[What Predicts Bra Fit, and Why It's Not What You Think](papers/paper1-what-predicts-bra-fit/paper.md)**
-  — a secondary analysis of ~35,000 crowdsourced bra reviews matched with
+- **[What Predicts Bra Fit, and Why It's Not What You Think](papers/paper1-what-predicts-bra-fit/paper.md)**.
+  A secondary analysis of ~35,000 crowdsourced bra reviews matched with
   real garment measurements. Underbust circumference does not predict fit;
   cup geometry does.
 
 - **A Quantum of Unmercy: Why Bra Sizing Cannot Be Transferred Between
-  Brands** — in progress. Covers the sizing engine, the verified per-brand
+  Brands**. In progress. Covers the sizing engine, the verified per-brand
   formula registry, and why the same cup letter means a different volume at
   different brands.
 
 ## Data
 
 The underlying datasets (Bratabase measurements and reviews) are not
-redistributed here — see the "Data and Method" section of the paper for why.
+redistributed here. See the "Data and Method" section of the paper for why.
 To assemble comparable data yourself: [bratabase.com](https://bratabase.com)
 for the primary source, and for comparison,
 [Clothing Fit Dataset for Size Recommendation](https://www.kaggle.com/datasets/rmisra/clothing-fit-dataset-for-size-recommendation)
@@ -36,8 +36,8 @@ which ones), but not the raw data it ran on.
 ## License
 
 Two separate licenses apply:
-- **Code** (`analysis/` folders): MIT — see [LICENSE](LICENSE).
-- **Papers** (text, figures, tables): CC BY 4.0 — see [papers/LICENSE](papers/LICENSE).
+- **Code** (`analysis/` folders): MIT, see [LICENSE](LICENSE).
+- **Papers** (text, figures, tables): CC BY 4.0, see [papers/LICENSE](papers/LICENSE).
 
 Both are free to reuse; the condition is attribution.
 
