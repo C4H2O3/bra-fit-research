@@ -2,11 +2,11 @@
 
 ## Introduction
 
-Incorrect bra sizing is a widespread, well-documented problem. Coltman, Steele, and McGhee (2018) showed in a sample of 309 women that about 90% fail professional fit criteria, with the cup, front band, and straps fitting worst. A more recent study, Haworth et al. (2025, n=24, Int. J. Fashion Design, Technology and Education, DOI 10.1080/17543266.2025.2461460), gives an even starker result: by the same professional criteria, not a single participant passed. Despite this, the overwhelming majority of existing sizing methods — from retail staff to brands' own online calculators — still come down to the same scheme: measure the underbust, measure the bust, take the difference, and convert it into a cup letter. Whether this method, despite being a near-universal industry standard, actually relates to real-world fit across a large population has never been empirically tested.
+Incorrect bra sizing is a widespread, well-documented problem. Coltman, Steele, and McGhee (2018) showed in a sample of 309 women that about 90% fail professional fit criteria, with the cup, front band, and straps fitting worst. A more recent study, Haworth et al. (2025, n=24, Int. J. Fashion Design, Technology and Education, DOI 10.1080/17543266.2025.2461460), gives an even starker result: by the same professional criteria, not a single participant passed. Despite this, the overwhelming majority of existing sizing methods – from retail staff to brands' own online calculators – still come down to the same scheme: measure the underbust, measure the bust, take the difference, and convert it into a cup letter. Whether this method, despite being a near-universal industry standard, actually relates to real-world fit across a large population has never been empirically tested.
 
-The reason lies in a structural gap between two types of existing data. Small controlled studies such as Coltman et al. (2018) and Haworth et al. (2025) provide reliable measurements but are limited in scale (n=309 and n=24, respectively). Large crowdsourced datasets, by contrast, are large in volume but measure the wrong thing: the ModCloth and RentTheRunway datasets (Kaggle Fit Feedback, 192,544 and 82,790 records) record the fit of rented or purchased clothing — dresses, jumpsuits, tops — not bras, and the stated bra size there serves only as a body characteristic of the buyer, not a report of garment fit. None of the sources known to me combines raw garment measurements with a genuinely, independently reported fit outcome on the same SKU at a scale sufficient for stable statistics.
+The reason lies in a structural gap between two types of existing data. Small controlled studies such as Coltman et al. (2018) and Haworth et al. (2025) provide reliable measurements but are limited in scale (n=309 and n=24, respectively). Large crowdsourced datasets, by contrast, are large in volume but measure the wrong thing: the ModCloth and RentTheRunway datasets (Kaggle Fit Feedback, 192,544 and 82,790 records) record the fit of rented or purchased clothing – dresses, jumpsuits, tops – not bras, and the stated bra size there serves only as a body characteristic of the buyer, not a report of garment fit. None of the sources known to me combines raw garment measurements with a genuinely, independently reported fit outcome on the same SKU at a scale sufficient for stable statistics.
 
-This work aims to empirically test, on a large secondary crowdsourced dataset (Bratabase), which measurable bra parameters are actually associated with real-world fit. Chief among these: whether underbust circumference — the input underlying nearly every existing sizing method — statistically predicts fit at all. To this end, the following tasks were addressed:
+This work aims to empirically test, on a large secondary crowdsourced dataset (Bratabase), which measurable bra parameters are actually associated with real-world fit. Chief among these: whether underbust circumference – the input underlying nearly every existing sizing method – statistically predicts fit at all. To this end, the following tasks were addressed:
 
 1. Collect and clean a dataset of garment measurements, reviews, and fit labels, ensuring comparability through matching by brand, model, and size, with control for brand effects.
 2. Test the reproducibility of an already-known result (Coltman et al., 2018) using a different method and a different population.
@@ -17,7 +17,7 @@ This work aims to empirically test, on a large secondary crowdsourced dataset (B
 
 The object of the study is bra fit as a measurable phenomenon; the subject is the relationship between garment measurements and self-reported fit outcome across a crowdsourced dataset. Methodologically, the work relies on secondary data analysis with brand-fixed-effect control (de-meaning), comparison of proportions across groups, and a text analysis of self-described body shape as a cross-check on one of the findings.
 
-The scientific novelty of this work is that, to the best of my knowledge, this is the first time raw garment measurements have been matched against genuinely independent fit labels at a scale two orders of magnitude larger than the nearest comparable study (36,550 matched pairs versus n=309 for Coltman et al.). On this dataset, the absence of a monotonic relationship between underbust circumference and real-world fit is demonstrated empirically for the first time — a result that directly contradicts the premise underlying nearly the entire existing industrial approach to sizing.
+The scientific novelty of this work is that, to the best of my knowledge, this is the first time raw garment measurements have been matched against genuinely independent fit labels at a scale two orders of magnitude larger than the nearest comparable study (36,550 matched pairs versus n=309 for Coltman et al.). On this dataset, the absence of a monotonic relationship between underbust circumference and real-world fit is demonstrated empirically for the first time – a result that directly contradicts the premise underlying nearly the entire existing industrial approach to sizing.
 
 ## Data and Method
 
@@ -29,13 +29,13 @@ Four linked datasets were extracted.
 
 `reviews.csv` contains 52,757 reviews, all genuine. The fit field (`fit_status`) takes the values Fits, Didn't fit (with a too big/too small qualifier), and Hasn't set fit. The last category (4,492 reviews, 8.5%) carries no fit signal and was excluded from all fit comparisons.
 
-`joined.csv` is the result of matching by brand, model, and size — 36,550 pairs of "garment measurement plus fit outcome."
+`joined.csv` is the result of matching by brand, model, and size – 36,550 pairs of "garment measurement plus fit outcome."
 
 `models.csv` contains 23,188 rows, one per model (brand and model slug). It includes the brand, model name, whether the model is discontinued, whether it has an underwire, and its bra type (Regular, Sports, Strapless, Swimwear, Longline/Corset, Soft cup/No underwire). It is used only to attach a bra type to each review for Table 6; no other field from this file is used in the analysis.
 
 The main control method is brand de-meaning: each measurement has its own brand's mean subtracted, so that differences in fit standards between manufacturers are not conflated with the overall effect of the measured parameter. A minimum threshold of 30 reviews per brand was set for a stable mean; the final slice used for fit comparisons is 34,505 reviews (Fits/Didn't fit, after excluding Hasn't set fit and brands below the threshold).
 
-One field was deliberately excluded from the analysis: `bust_perimeter_cm` produced physically impossible median values (17–30 cm as a bust circumference). Checking the Bratabase site itself showed that this field appears neither in the advanced measurement-search form nor in the per-size aggregation table — meaning the field's unreliability is acknowledged by the source itself, not only by this check. The field is not used anywhere in the results below.
+One field was deliberately excluded from the analysis: `bust_perimeter_cm` produced physically impossible median values (17–30 cm as a bust circumference). Checking the Bratabase site itself showed that this field appears neither in the advanced measurement-search form nor in the per-size aggregation table – meaning the field's unreliability is acknowledged by the source itself, not only by this check. The field is not used anywhere in the results below.
 
 ## Results
 
@@ -50,7 +50,7 @@ All proportions below are the percentage of Fits reviews within a quintile of th
 | Wire length | 36.7% | 39.1% | 37.3% | 34.9% | 33.9% | 65 |
 | Cup height | 37.2% | 38.1% | 36.2% | 36.3% | 34.9% | 55 |
 
-All four cup measurements show declining Fit% from Q1 to Q5; the effect survives brand control. The direction agrees with Coltman et al. (2018, n=309) and Kaggle Fit Feedback (n=275,334) — a third, independent population and method yielding the same result.
+All four cup measurements show declining Fit% from Q1 to Q5; the effect survives brand control. The direction agrees with Coltman et al. (2018, n=309) and Kaggle Fit Feedback (n=275,334) – a third, independent population and method yielding the same result.
 
 **Table 2. Fit% by quintile of band measurements, after brand de-meaning**
 
@@ -95,7 +95,7 @@ The two dominant options (2 and 3 hooks, 91% of the sample) do not differ in Fit
 
 The columns describe the spread of the garment's own cups (an objective measurement of the model, narrower or wider than typical for the brand). The rows are what the woman wrote about her own body in the review. If garment spread simply matched the body, a wide-set woman should find a wide garment fitting no worse, and probably better, than a narrow one. That is not what happens: in both groups (wide-set and narrow-set alike) the wide garment fits worse than the narrow one.
 
-This means a wide spread is, in part, an independent flaw of the construction itself, not merely a mismatch with a particular body. For narrow-set women the gap is almost twice as large (−5.4 pp versus −2.4 pp), because two factors act on them at once — the garment's own flaw plus an additional mismatch with their body — whereas for wide-set women the second factor partly offsets the first.
+This means a wide spread is, in part, an independent flaw of the construction itself, not merely a mismatch with a particular body. For narrow-set women the gap is almost twice as large (−5.4 pp versus −2.4 pp), because two factors act on them at once – the garment's own flaw plus an additional mismatch with their body – whereas for wide-set women the second factor partly offsets the first.
 
 **Table 6. Fit% by bra type**
 
@@ -112,7 +112,7 @@ Bras without an underwire or rigid structure fit noticeably better; strapless fi
 
 ## Additional Exploratory Finding: Mentions of Pain and Migraine in Review Text
 
-Motivation — a study by neurologists (Pocock et al., 2026, *Headache: The Journal of Head and Face Pain*, DOI 10.1111/head.70226, n=687) linked a clinical diagnosis of macromastia to an elevated, adjusted prevalence of chronic migraine (aPR=1.40, 95% CI 1.16–1.68) and neck pain (aPR=2.04, 95% CI 1.65–2.53), as well as cervical radiculopathy and obstructive sleep apnea. The design is retrospective, the sample is limited to patients at a neurology clinic, and no causal mechanism is established — the study itself acknowledges this.
+Motivation – a study by neurologists (Pocock et al., 2026, *Headache: The Journal of Head and Face Pain*, DOI 10.1111/head.70226, n=687) linked a clinical diagnosis of macromastia to an elevated, adjusted prevalence of chronic migraine (aPR=1.40, 95% CI 1.16–1.68) and neck pain (aPR=2.04, 95% CI 1.65–2.53), as well as cervical radiculopathy and obstructive sleep apnea. The design is retrospective, the sample is limited to patients at a neurology clinic, and no causal mechanism is established – the study itself acknowledges this.
 
 Out of curiosity, the same 52,757 Bratabase reviews were checked for mentions of symptoms ("neck pain," "migraine," "headache," "shoulder pain," "back pain," and variants) in the free-text review. 146 matches were found (0.3%), of which 8 were "migraine."
 
@@ -128,7 +128,7 @@ The share of mentions rises almost fourfold from small to large cups. This canno
 
 ## Additional Exploratory Finding: Direction of Band Adjustment Relative to the Label
 
-Motivation — a rule of thumb common in the lingerie community holds that the band on the label is usually smaller than the raw underbust measurement by "two or three steps" (10–15 cm, i.e., two or three steps of the 5 cm size grid under GOST 29097-2015). The rule implies a systematic shift in one direction: label smaller than measurement.
+Motivation – a rule of thumb common in the lingerie community holds that the band on the label is usually smaller than the raw underbust measurement by "two or three steps" (10–15 cm, i.e., two or three steps of the 5 cm size grid under GOST 29097-2015). The rule implies a systematic shift in one direction: label smaller than measurement.
 
 To check the direction (not the cause), the same 52,757 Bratabase reviews were checked for phrases about band fit relative to expectation.
 
@@ -141,13 +141,13 @@ To check the direction (not the cause), the same 52,757 Bratabase reviews were c
 | "sized down band" (went to a smaller band) | 569 | 1.079% |
 | "sized up band" (went to a larger band) | 691 | 1.310% |
 
-"Runs small" occurs almost twice as often as "runs large," and "sized up" is even slightly more common than "sized down" — there is no consistent one-way shift toward "label always smaller than measurement" in this dataset. Caveat: these phrases describe a choice between labeled sizes while trying on a single model, not the pair "raw tape measurement → final chosen label" referenced by the rule itself — a related but not identical question. Even so, the direction agrees with the finding in Table 2: there is no predictable one-way shift in band circumference in this data.
+"Runs small" occurs almost twice as often as "runs large," and "sized up" is even slightly more common than "sized down" – there is no consistent one-way shift toward "label always smaller than measurement" in this dataset. Caveat: these phrases describe a choice between labeled sizes while trying on a single model, not the pair "raw tape measurement → final chosen label" referenced by the rule itself – a related but not identical question. Even so, the direction agrees with the finding in Table 2: there is no predictable one-way shift in band circumference in this data.
 
 ## Additional Exploratory Finding: Wire Poking Through, Wire Length, and Cup Depth
 
-Motivation — a common observation in the lingerie industry: the underwire often breaks through the channel fabric specifically at its end, not in the middle. A plausible mechanism is a concentration of cyclic load at the transition between a rigid element (the wire) and an elastic shell (the channel fabric): with each compression cycle, the material at the end of the rigid element experiences more local deformation than the material in the middle of the channel. Direct measurements of this effect do not appear to exist in the open literature.
+Motivation – a common observation in the lingerie industry: the underwire often breaks through the channel fabric specifically at its end, not in the middle. A plausible mechanism is a concentration of cyclic load at the transition between a rigid element (the wire) and an elastic shell (the channel fabric): with each compression cycle, the material at the end of the rigid element experiences more local deformation than the material in the middle of the channel. Direct measurements of this effect do not appear to exist in the open literature.
 
-Method — `joined.csv` (garment measurement and review in one row, 34,818 rows with a known wire length after excluding wireless models) was checked for phrases about the wire poking through or breaking through ("wire poking," "wire popped," "wire coming through," "wire broke," and variants). 106 mentions were found.
+Method – `joined.csv` (garment measurement and review in one row, 34,818 rows with a known wire length after excluding wireless models) was checked for phrases about the wire poking through or breaking through ("wire poking," "wire popped," "wire coming through," "wire broke," and variants). 106 mentions were found.
 
 **Table 9. Share of complaints about a poking wire, by wire-length quintile**
 
@@ -159,9 +159,9 @@ Method — `joined.csv` (garment measurement and review in one row, 34,818 rows 
 | Q4 | 27.0–30.7 cm | 6,963 | 16 | 0.230% |
 | Q5 | 30.7–50.8 cm | 6,966 | 41 | 0.589% |
 
-The share of complaints rises from the shortest wire to the longest by almost 4.6 times. The increase is not perfectly monotonic (Q2 is higher than Q3–Q4), but the edge-to-edge direction is consistent and agrees with the plausible mechanism: more length — more leverage — more accumulated displacement at the end of the channel.
+The share of complaints rises from the shortest wire to the longest by almost 4.6 times. The increase is not perfectly monotonic (Q2 is higher than Q3–Q4), but the edge-to-edge direction is consistent and agrees with the plausible mechanism: more length – more leverage – more accumulated displacement at the end of the channel.
 
-Wire length is geometrically determined by cup depth (the wire traces the underside of the cup), so before attributing the effect specifically to length, the relationship between the two was checked: correlation r=0.921 on the same 34,818 rows — this is the same signal, not two independent measurements.
+Wire length is geometrically determined by cup depth (the wire traces the underside of the cup), so before attributing the effect specifically to length, the relationship between the two was checked: correlation r=0.921 on the same 34,818 rows – this is the same signal, not two independent measurements.
 
 **Table 10. Share of complaints about a poking wire, by cup-depth quintile (control check)**
 
@@ -175,7 +175,7 @@ Wire length is geometrically determined by cup depth (the wire traces the unders
 
 The spread by cup depth is similar in shape to Table 9 (rising toward the top quintile), but about half as wide in magnitude (2.1× versus 4.6×). If wire length were a pure substitute for cup depth with no contribution of its own, the two spreads should have nearly coincided. The difference hints at a possible independent contribution from wire length beyond overall cup size, but with 16–41 complaints per bucket this cannot be reliably distinguished from noise.
 
-A separate caveat, important for practical interpretation: the 4.6-fold increase is a relative figure. In absolute terms, the difference between the shortest and longest wire is 0.46 percentage points (0.129% versus 0.589%) — roughly 4–5 extra complaints about a poking wire per 1,000 reviews of long-wire models compared with short-wire ones. A "several-fold" increase and an increase of "a few cases per thousand" differ in practical significance — the same distinction between relative and absolute risk already applied above to the migraine study (section "Additional Exploratory Finding: Mentions of Pain and Migraine"). I take a large relative difference combined with a small absolute frequency to mean that the problem is real and directionally reproducible, but does not necessarily call for immediate intervention.
+A separate caveat, important for practical interpretation: the 4.6-fold increase is a relative figure. In absolute terms, the difference between the shortest and longest wire is 0.46 percentage points (0.129% versus 0.589%) – roughly 4–5 extra complaints about a poking wire per 1,000 reviews of long-wire models compared with short-wire ones. A "several-fold" increase and an increase of "a few cases per thousand" differ in practical significance – the same distinction between relative and absolute risk already applied above to the migraine study (section "Additional Exploratory Finding: Mentions of Pain and Migraine"). I take a large relative difference combined with a small absolute frequency to mean that the problem is real and directionally reproducible, but does not necessarily call for immediate intervention.
 
 ## Findings
 
@@ -183,7 +183,7 @@ The main result: underbust circumference, the basis of nearly every existing siz
 
 Independent confirmation from a different angle comes from Sohn and Kim (2026, n=2,750, five ethnic groups): the same method, the difference between bust and underbust circumference, yields a statistically different real volume depending on ethnicity (p<0.001). In other words, the same computed result (a "C cup," say) corresponds to a different body in different population groups. Our result and Sohn and Kim's look at the problem from different sides: in ours, the method fails to predict the fit outcome; in theirs, the calculation itself fails to reproduce the same physical quantity. Both point to the same structural defect in the method, not to random noise in a single sample.
 
-A similar picture emerges in Jolkovsky et al. (2025, n=395, actual weight of excised breast tissue): in a multivariate model, cup letter on its own ceases to be a significant predictor of breast weight; only sister size (the combination of band and cup) and BMI remain significant. This agrees with the finding in Tables 1–2: it is not any single cup or band measurement on its own that matters, but their combination, which represents volume. Separately, Oon et al. (2022) show that among bra characteristics, volume — not cup letter or band size on its own — is the single variable associated with all six satisfaction items.
+A similar picture emerges in Jolkovsky et al. (2025, n=395, actual weight of excised breast tissue): in a multivariate model, cup letter on its own ceases to be a significant predictor of breast weight; only sister size (the combination of band and cup) and BMI remain significant. This agrees with the finding in Tables 1–2: it is not any single cup or band measurement on its own that matters, but their combination, which represents volume. Separately, Oon et al. (2022) show that among bra characteristics, volume – not cup letter or band size on its own – is the single variable associated with all six satisfaction items.
 
 The discrepancy is not confined to a single pair of brands: the same 2 cm quantum found for Triumph is independently confirmed for Wolford and matches both the EN 13402-3 norm and Milavitsa's own formula, whereas Intimissimi gives 5–5.5 cm in every comparison. The methodology for extracting and verifying these brand formulas from official sources is described in detail in the companion paper, *"A Quantum of Unmercy: Why Bra Sizing Cannot Be Transferred Between Brands."* A plausible explanation for why different brands choose a different step size at all lies in SKU economics: a finer cup quantum geometrically increases the number of stock variants for each line, and, other things equal, a manufacturer trades off fit precision against assortment cost. This explanation has not been directly tested (for example, against brands' internal data), so it is offered as a plausible, not a proven, mechanism.
 
@@ -191,7 +191,7 @@ The nonmonotonic effect of gore height and wing height (Table 3) is a separate f
 
 The results by bra type (Table 6) serve both as an external check on data adequacy (the pattern is the expected one: bras without an underwire or rigid structure fit noticeably better) and as an important caveat on the rest of the results: 89% of the slice is underwired bras, so the findings in Tables 1–5 cannot, without further checking, be extended to lingerie without a rigid structure.
 
-Taken together, the results of this paper call into question not the accuracy of any particular brand's calculator, but the very premise on which nearly all of them are built: that two circumferences suffice to predict fit. This is not a hypothesis or an opinion — it is, to my knowledge, the first test of this premise on a dataset of this scale, and the premise did not survive it. What to use instead of the two-measurement method is a separate methodological question, addressed in the companion paper, *"A Quantum of Unmercy: Why Bra Sizing Cannot Be Transferred Between Brands."*
+Taken together, the results of this paper call into question not the accuracy of any particular brand's calculator, but the very premise on which nearly all of them are built: that two circumferences suffice to predict fit. This is not a hypothesis or an opinion – it is, to my knowledge, the first test of this premise on a dataset of this scale, and the premise did not survive it. What to use instead of the two-measurement method is a separate methodological question, addressed in the companion paper, *"A Quantum of Unmercy: Why Bra Sizing Cannot Be Transferred Between Brands."*
 
 ## Limitations
 
@@ -199,13 +199,13 @@ Taken together, the results of this paper call into question not the accuracy of
 
 **The fit label is self-report, not a professional assessment.** `fit_status` (Fits/Didn't fit) is what a person wrote about her own experience, not a fitter's conclusion by objective criteria, as in Coltman et al. (2018) or Haworth et al. (2025). Self-reported fit is subject to at least three effects: inaccuracy of self-measuring one's body and the garment; a tendency not to notice objective fit problems without an external reference point; and reluctance to admit that an already purchased and paid-for bra does not, in fact, fit. Direct quantitative confirmation comes from Haworth et al. (2025, n=24): participants' subjective fit reports agreed with a professional fitter's objective assessment in only 51% of cases. This is a different sample and a different method, not a measurement on the Bratabase data itself, but it gives a concrete figure for the gap between self-report and objective fit assessment, rather than a merely plausible argument with no number behind it. This is why the Fit% shares in Tables 1–7 are better read as a lower bound on the severity of the problem than as a precise estimate.
 
-**No body data: age, BMI, ethnicity.** Bratabase stores only garment measurements, not body measurements. Shi et al. (2020, n=137, *Ergonomics*) show that with excess weight, breast volume increases two- to threefold compared with a normal BMI in the nominally same class. If BMI distribution differs across brands or size groups, part of the results may reflect not the measurement itself but a hidden link to body composition that brand de-meaning does not remove. A partial remedy could be a rough body-type classification (e.g., slim/average/fuller) from photos attached to some reviews on the site — a subjective method, but probably accurate enough for three or four categories. Photos were deliberately not collected as part of this data gathering, owing to the substantial increase in archive size; the collection is reproducible if needed.
+**No body data: age, BMI, ethnicity.** Bratabase stores only garment measurements, not body measurements. Shi et al. (2020, n=137, *Ergonomics*) show that with excess weight, breast volume increases two- to threefold compared with a normal BMI in the nominally same class. If BMI distribution differs across brands or size groups, part of the results may reflect not the measurement itself but a hidden link to body composition that brand de-meaning does not remove. A partial remedy could be a rough body-type classification (e.g., slim/average/fuller) from photos attached to some reviews on the site – a subjective method, but probably accurate enough for three or four categories. Photos were deliberately not collected as part of this data gathering, owing to the substantial increase in archive size; the collection is reproducible if needed.
 
 **De-meaning controls for the average brand effect, not within-brand variation.** Subtracting the brand mean removes the difference "this brand fits worse on average," but not the difference between individual models of the same brand, which can be substantial (partly, but not fully, addressed by the breakdown by bra type in Table 6).
 
 **The dataset is not published.** This work shares derived figures and analysis code, not raw data. This limits direct reproducibility: a reader can assemble a comparable dataset from the cited original sources, but cannot verify these exact rows one for one.
 
-**Correlation, not causation.** It cannot be established from this data that, say, greater cup depth by itself worsens fit rather than correlating with something else. But the direction of the effect converged across three independent sources at once — Coltman et al. (2018), Kaggle Fit Feedback, and this work — and such convergence across different populations and methods is rare in this field and is, on its own, weighty enough for practical decisions, even without a formal causal inference.
+**Correlation, not causation.** It cannot be established from this data that, say, greater cup depth by itself worsens fit rather than correlating with something else. But the direction of the effect converged across three independent sources at once – Coltman et al. (2018), Kaggle Fit Feedback, and this work – and such convergence across different populations and methods is rare in this field and is, on its own, weighty enough for practical decisions, even without a formal causal inference.
 
 ## Conclusion
 
@@ -218,8 +218,8 @@ Taken together, the results of this paper call into question not the accuracy of
 ## Data and Code
 
 This work does not publish the raw dataset (rationale in "Data and Method"). The aggregation and statistical analysis code used to produce Tables 1–10 (excl. Table 5) is published. For independently assembling comparable data:
-- [bratabase.com](https://bratabase.com) — an open database of bra measurements and reviews (manual collection, no automation);
-- [Clothing Fit Dataset for Size Recommendation](https://www.kaggle.com/datasets/rmisra/clothing-fit-dataset-for-size-recommendation) (the ModCloth and RentTheRunway datasets, Kaggle) — for comparison, see Introduction.
+- [bratabase.com](https://bratabase.com) – an open database of bra measurements and reviews (manual collection, no automation);
+- [Clothing Fit Dataset for Size Recommendation](https://www.kaggle.com/datasets/rmisra/clothing-fit-dataset-for-size-recommendation) (the ModCloth and RentTheRunway datasets, Kaggle) – for comparison, see Introduction.
 
 ## References
 
