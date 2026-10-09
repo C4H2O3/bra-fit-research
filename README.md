@@ -17,10 +17,10 @@ holds up against real data. It is not a product and not a commercial venture.
   real garment measurements. Underbust circumference does not predict fit;
   cup geometry does.
 
-- **A Quantum of Unmercy: Why Bra Sizing Cannot Be Transferred Between
-  Brands**. In progress. Covers the sizing engine, the verified per-brand
-  formula registry, and why the same cup letter means a different volume at
-  different brands.
+- **[A Quantum of Unmercy: Why Bra Sizing Cannot Be Transferred Between
+  Brands](papers/paper2-a-quantum-of-unmercy/paper.md)**. Covers the sizing
+  engine, the verified per-brand formula registry, and why the same cup
+  letter means a different volume at different brands.
 
 ## Data
 
